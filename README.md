@@ -11,7 +11,6 @@ API desenvolvida com Spring Boot para o gerenciamento de pessoas.
 - [x] Listar endereços de uma pessoa
 - [x] Poder informar qual endereço é o principal
     - No caso de não ser informado se o endereço é ou não o principal, o mesmo será salvao com endereço secundário.
-
 - [x] Todas as respostas da API devem ser JSON
 - [x] O banco de dados H2 deve ser usado
 
