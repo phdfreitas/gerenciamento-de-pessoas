@@ -37,10 +37,13 @@ public class PessoaServiceTests {
     @DisplayName("Teste para salvar uma nova pessoa")
     @Test
     public void givenPessoa_whenSalvarPessoa_thenRetornaPessoaSalva(){
+        //given
         given(pessoaRepository.save(pessoa)).willReturn(pessoa);
 
+        //when
         Pessoa pessoaSalva = pessoaService.salvaPessoa(pessoa);
 
+        //then
         assertThat(pessoaSalva).isNotNull();
     }
 
@@ -62,7 +65,7 @@ public class PessoaServiceTests {
     @DisplayName("Teste para consultar uma pessoa")
     @Test
     public void givenIdPessoa_whenConsultarPessoa_thenRetornaPessoaSalva(){
-        //given - A pessoa deve estar no banco
+        //given
         given(pessoaRepository.findById(1L)).willReturn(Optional.of(pessoa));
 
         //when

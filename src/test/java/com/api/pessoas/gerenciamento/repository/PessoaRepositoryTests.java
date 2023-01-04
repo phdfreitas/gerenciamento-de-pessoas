@@ -29,8 +29,12 @@ public class PessoaRepositoryTests {
     @DisplayName("Teste para salvar uma nova pessoa")
     @Test
     public void givenPessoa_whenSalvaNovaPessoa_thenRetornaPessoaSalva(){
+        //given - Neste caso é feito no @BeforeEach
+
+        //when
         Pessoa novaPessoa = pessoaRepository.save(pessoa);
 
+        //then
         assertThat(novaPessoa).isNotNull();
     }
 
